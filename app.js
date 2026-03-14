@@ -3,7 +3,7 @@ import express from 'express';
 import notFoundMiddleware from './middleware/not-found.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
 
-import mainRouter from './routes/main.js';
+import router from './routes/main.js';
 
 const app = express();
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(express.static('./public'));
 app.use(express.json());
 
-app.use('/api/v1', mainRouter);
+app.use('/api/v1', router);
 
 
 
